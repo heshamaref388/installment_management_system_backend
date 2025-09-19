@@ -17,7 +17,10 @@ import adminContactsRouter from "./src/modules/adminContacts/adminContacts.route
 const app = express();
 const port = 3000;
 await dbConnection();
-app.use(cors());
+app.use(cors({
+  origin: 'https://installment-management-system-front.vercel.app',
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.static("uploads"));
 app.use(morgan("dev"));
