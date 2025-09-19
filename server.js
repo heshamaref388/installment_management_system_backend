@@ -20,6 +20,9 @@ await dbConnection();
 app.use(cors({
   origin: 'https://installment-management-system-front.vercel.app',
   credentials: true
+},{
+  origin: 'http://localhost:5173',
+  credentials: true
 }));
 app.use(express.json());
 app.use(express.static("uploads"));
