@@ -17,10 +17,7 @@ import adminContactsRouter from "./src/modules/adminContacts/adminContacts.route
 const app = express();
 const port = 3000;
 await dbConnection();
-app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.static("uploads"));
 app.use(morgan("dev"));
