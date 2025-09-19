@@ -16,7 +16,7 @@ import adminContactsRouter from "./src/modules/adminContacts/adminContacts.route
 
 const app = express();
 const port = 3000;
-dbConnection();
+await dbConnection();
 app.use(cors({
   origin: 'http://localhost:5173',
   credentials: true
