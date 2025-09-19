@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export const  dbConnection = async() => {
- await mongoose
+   mongoose
     .connect("mongodb+srv://heshamaref3888:Hesham2020@cluster0.slc6oyv.mongodb.net/installment_management_system", {
       serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 seconds
       socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
